@@ -1,0 +1,32 @@
+# LilyPadBoatGuard config
+# PaperMC 1.20.4
+
+# Master toggle for the plugin behavior.
+enabled: true
+
+# Cancels the event where a boat tries to change/break a lily pad block.
+# This is the main protection and should normally stay true.
+prevent-boat-breaking-lily-pads: true
+
+# Extra safety check: when a boat physically collides with a lily pad,
+# the plugin briefly watches that lily pad and restores it if another plugin/server quirk removes it.
+# Keep enabled if you want maximum reliability.
+restore-lily-pad-after-collision: true
+
+# How many ticks later the plugin checks/restores the lily pad after a collision.
+# 1 tick = 0.05 seconds. 1-2 is usually enough.
+restore-delay-ticks: 1
+
+# Which vehicle/entity types count as boats.
+# Vanilla 1.20.4 boat entity types are BOAT and CHEST_BOAT.
+protected-boat-types:
+  - BOAT
+  - CHEST_BOAT
+
+# Which block types should be protected from boats.
+# Default is just LILY_PAD, but this lets you add custom-like behavior later.
+protected-block-types:
+  - LILY_PAD
+
+# Optional logging. Useful while testing, annoying on a live server.
+debug: false

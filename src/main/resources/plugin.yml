@@ -1,0 +1,16 @@
+name: LilyPadBoatGuard
+version: '${project.version}'
+main: com.nateandfriends.lilypadboatguard.LilyPadBoatGuardPlugin
+api-version: '1.20'
+author: NateAndFriends
+description: Stops boats from breaking lily pads when colliding with them.
+commands:
+  lilypadboatguard:
+    description: Reload LilyPadBoatGuard config.
+    usage: /<command> reload
+    aliases: [lpbg, lilypadguard]
+    permission: lilypadboatguard.admin
+permissions:
+  lilypadboatguard.admin:
+    description: Allows reloading LilyPadBoatGuard.
+    default: op
